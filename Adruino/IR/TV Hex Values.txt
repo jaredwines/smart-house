@@ -1,0 +1,3 @@
+20DF10EF //power
+20DF40BF // volume up
+20DFC03F // volume down
