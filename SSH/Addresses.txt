@@ -1,5 +1,5 @@
 Addresses to SSH into raspberry pi.
 
-Local Address: pi@192.168.0.5                   port: 22
+Local Address: pi@192.168.0.200              port: 22
 
-External Address: pi@jared-room.dnset.com       port 22
+External Address: pi@smartroom.ddns.net      port 22
