@@ -27,8 +27,8 @@ public class Server {
     public void serverCommand() {
         new AsyncTask<Integer, Void, Void>() {
             protected Void doInBackground(Integer... params) {
-                String host = "192.168.1.2";
-                String user = "jared";
+                String host = "192.168.0.5";
+                String user = "pi";
                 String password = "powell";
                 String command1 = commandLine;
                 try
@@ -63,7 +63,7 @@ public class Server {
                             break;
                         }
                         try {
-                            Thread.sleep(1000);
+                            //Thread.sleep(1000);
                         } catch (Exception ee) {
                         }
                     }
