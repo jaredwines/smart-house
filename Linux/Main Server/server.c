@@ -19,27 +19,53 @@ int master_socket , addrlen , new_socket , client_socket[30] ,
 int max_sd;  
 struct sockaddr_in address;  
        
-char buffer[1025];  //data buffer of 1K 
+char buffer[100];  //data buffer of 0.1K 
 	
 FILE *fp;
-char path[1035];
+char path[1024];
 
-void excuteCommand(char command[1025], int nullTermChar)
+int isAcceptableCommand(char command[100])
 {
-	command[nullTermChar - 2] = '\0';
-	fp = popen(command, "r");
-	if (fp == NULL) {
-		printf("Failed to run command\n" );
-		exit(1);
+	int result = FALSE;
+	char * arrOfAcceptableCommands[] = 
+	{
+	  "ls"
+	};
+	int arrSize = sizeof(arrOfAcceptableCommands) / sizeof(arrOfAcceptableCommands[0]);
+	
+	if(strncmp(command, "gate", 4) == 0)
+		result = TRUE;
+	
+	int i;
+	for (i = 0; i < arrSize; i++)
+	{
+		if(strcmp(command, arrOfAcceptableCommands[i]) == 0)
+			result = TRUE;
 	}
-	/* Read the output a line at a time - output it. */
-	while (fgets(path, sizeof(path), fp) != NULL) {
-	//printf("%s", path);
-	send(sd , path , strlen(path) , 0 );  
+
+	return result;
+}
+
+void excuteCommand(char command[100], int charSize)
+{
+	command[charSize - 2] = '\0';
+	
+	if(isAcceptableCommand(command) == TRUE)
+	{
+		fp = popen(command, "r");
+		if (fp == NULL) {
+			printf("Failed to run command\n" );
+			exit(1);
+		}
+		/* Read the output a line at a time - output it. */
+		while (fgets(path, sizeof(path), fp) != NULL) {
+		//printf("%s", path);
+		send(sd , path , strlen(path) , 0 );  
+		}
+		/* close */
+		pclose(fp); 
+		memset(path, 0, sizeof(path));
 	}
-	/* close */
-	pclose(fp); 
-	memset(path, 0, sizeof(path));
 }
    
 int main(int argc , char *argv[])  
