@@ -135,12 +135,6 @@ int main(int argc , char *argv[])
                 exit(EXIT_FAILURE);  
             }  
            
-            //send new connection greeting message 
-            if( send(new_socket, message, strlen(message), 0) != strlen(message) )  
-            {  
-                perror("send");  
-            }  
-               
             //add new socket to array of sockets 
             for (i = 0; i < max_clients; i++)  
             {  
