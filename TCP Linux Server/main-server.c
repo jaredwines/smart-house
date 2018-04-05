@@ -29,7 +29,23 @@ int isAcceptableCommand(char command[100])
 	int result = FALSE;
 	char * arrOfAcceptableCommands[] = 
 	{
-	  "ls"
+		"remote tv power",
+		"remote tv volup",
+		"remote tv voldown",
+		"remote soundbar power",
+		"remote soundbar volup",
+		"remote soundbar voldown",
+		"remote soundbar source",
+		"remote soundbar mute",
+		"remote soundbar left",
+		"remote soundbar right",
+		"remote soundbar next",
+		"remote soundbar play",
+		"remote soundbar pre",
+		"remote soundbar effect",
+		"remote soundbar sound",
+		"remote soundbar bluetooth",
+		"remote soundbar control"
 	};
 	int arrSize = sizeof(arrOfAcceptableCommands) / sizeof(arrOfAcceptableCommands[0]);
 	

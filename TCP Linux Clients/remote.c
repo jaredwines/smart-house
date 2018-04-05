@@ -43,13 +43,13 @@ int main (int argc, char *argv[])
 		if (strcmp(argv[2], "power") == 0)
 			system(arrOfTVCommands[0]);
 		
-		else if (strcmp(argv[2], "volUp") == 0)
+		else if (strcmp(argv[2], "volup") == 0)
 			system(arrOfTVCommands[1]);
 		
-		else if (strcmp(argv[2], "volDown") == 0)
+		else if (strcmp(argv[2], "voldown") == 0)
 			system(arrOfTVCommands[2]);
 		else
-			perror("Invalid Function Name!");  
+			printf("Error: Invalid Function Name!\n");  
 	}
 	
 	else if (strcmp(argv[1], "soundbar") == 0)
@@ -57,10 +57,10 @@ int main (int argc, char *argv[])
 		if (strcmp(argv[2], "power") == 0)
 			system(arrOfTVCommands[0]);
 		
-		else if (strcmp(argv[2], "volUp") == 0)
+		else if (strcmp(argv[2], "volup") == 0)
 			system(arrOfTVCommands[1]);
 		
-		else if (strcmp(argv[2], "volDown") == 0)
+		else if (strcmp(argv[2], "voldown") == 0)
 			system(arrOfTVCommands[2]);
 		
 		else if (strcmp(argv[2], "source") == 0)
@@ -96,11 +96,11 @@ int main (int argc, char *argv[])
 		else if (strcmp(argv[2], "control") == 0)
 			system(arrOfTVCommands[13]);
 		else
-			perror("Invalid Function Name!");  
+			printf("Error: Invalid Function Name!\n");  
 	}
 	
 	else
-		perror("Invalid Device Name!");  
+		printf("Error: Invalid Device Name!\n");  
 	
 	
 	return 0;
