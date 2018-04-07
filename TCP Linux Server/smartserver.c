@@ -64,7 +64,7 @@ int isAcceptableCommand(char command[100])
 
 void excuteCommand(char command[100], int charSize)
 {
-	command[charSize - 2] = '\0';
+	command[charSize - 3] = '\0';
 	
 	if(isAcceptableCommand(command) == TRUE)
 	{
@@ -78,6 +78,7 @@ void excuteCommand(char command[100], int charSize)
 		//printf("%s", path);
 		send(sd , path , strlen(path) , 0 );  
 		}
+
 		/* close */
 		pclose(fp); 
 		memset(path, 0, sizeof(path));
@@ -211,8 +212,8 @@ int main(int argc , char *argv[])
                    
                 //Echo back the message that came in 
                 else 
-                {  
-					excuteCommand(buffer, valread);
+                {  	
+			excuteCommand(buffer, valread);
                 }  
             }  
         }  

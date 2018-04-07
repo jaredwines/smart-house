@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_gate"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Gate"/>
+        <item
+            android:id="@+id/nav_tv"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="TV"/>
+        <item
+            android:id="@+id/nav_garage"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Garage"/>
+        <item
+            android:id="@+id/nav_lights_fan"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Lights and Fan"/>
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="About"/>
+    </group>
+
+</menu>
