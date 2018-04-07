@@ -7,4 +7,6 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="title_gate_opener">GateOpener</string>
+    <string name="title_activity_romote">Romote</string>
+    <string name="title_activity_remote">Remote</string>
 </resources>

@@ -23,8 +23,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GateOpener"
+            android:name=".GateOpenerActivity"
             android:label="@string/title_gate_opener"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Room1Activity"
+            android:label="@string/title_activity_remote"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
