@@ -41,28 +41,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.settings, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -72,14 +50,14 @@ public class MainActivity extends AppCompatActivity
             //Is already in MainActivity.class
             //Intent i = new Intent(getApplicationContext(),MainActivity.class);
             //startActivity(i);
-        } else if (id == R.id.nav_room1) {
-            Intent i = new Intent(getApplicationContext(),Room1Activity.class);
-            startActivity(i);
-        } else if (id == R.id.nav_gate) {
+        } else if (id == R.id.nav_gate_opener) {
             Intent i = new Intent(getApplicationContext(),GateOpenerActivity.class);
             startActivity(i);
-        } else if (id == R.id.nav_garage) {
+        } else if (id == R.id.nav_garage_opener) {
 
+        } else if (id == R.id.nav_room) {
+            Intent i = new Intent(getApplicationContext(),RoomActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_about) {
             Intent i = new Intent(getApplicationContext(),AboutActivity.class);
             startActivity(i);

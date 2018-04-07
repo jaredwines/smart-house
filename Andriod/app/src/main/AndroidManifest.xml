@@ -28,8 +28,8 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".Room1Activity"
-            android:label="@string/title_activity_remote"
+            android:name=".RoomActivity"
+            android:label="@string/title_activity_room"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
