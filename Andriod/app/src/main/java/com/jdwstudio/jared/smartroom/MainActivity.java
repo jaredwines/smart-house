@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity
             Intent i = new Intent(getApplicationContext(),GateOpenerActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_garage_opener) {
-
+            Intent i = new Intent(getApplicationContext(),GarageOpenerActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_room) {
             Intent i = new Intent(getApplicationContext(),RoomActivity.class);
             startActivity(i);

@@ -10,4 +10,6 @@
     <string name="title_gate_opener">Gate Opener</string>
     <string name="title_activity_about">About</string>
     <string name="title_activity_room">Room</string>
+    <string name="title_activity_garage_opener">GarageOpenerActivity</string>
+    <string name="action_settings">Settings</string>
 </resources>

@@ -37,6 +37,11 @@
             android:label="@string/title_activity_about"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+            android:name=".GarageOpenerActivity"
+            android:label="@string/title_activity_garage_opener"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
