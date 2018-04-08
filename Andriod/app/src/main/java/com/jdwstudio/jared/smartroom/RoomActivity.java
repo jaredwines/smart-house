@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,7 +23,8 @@ public class RoomActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private TCPClient mTcpClient;
     private connectTask cTask;
-    Button TvPower;
+    Button TvPower, TvSource, SoundBarPower,SoundBarSouce,SoundBarVolDown,SoundBarVolUp,SoundBarMute,
+            SoundBarPre,SoundBarPlay,SoundBarNext,LightsOn,LightsOff,FanOn,FanOff,PCWol;
     TextView ConnectionInfo, Warning;
     String host = "pi.jaredwines.com";
     int port = 8000;
@@ -43,12 +45,120 @@ public class RoomActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        //call the widgets
+        TvPower = (Button) findViewById(R.id.tv_power);
+        TvSource = (Button) findViewById(R.id.tv_source);
+        SoundBarPower = (Button) findViewById(R.id.soundbar_power);
+        SoundBarSouce = (Button) findViewById(R.id.soundbar_source);
+        SoundBarVolDown = (Button) findViewById(R.id.soundbar_vol_down);
+        SoundBarVolUp = (Button) findViewById(R.id.soundbar_vol_up);
+        SoundBarMute = (Button) findViewById(R.id.soundbar_mute);
+        SoundBarPre = (Button) findViewById(R.id.soundbar_pre);
+        SoundBarPlay = (Button) findViewById(R.id.soundbar_play);
+        SoundBarNext = (Button) findViewById(R.id.soundbar_next);
+        LightsOn = (Button) findViewById(R.id.lights_on);
+        LightsOff = (Button) findViewById(R.id.lights_off);
+        FanOn = (Button) findViewById(R.id.fan_on);
+        FanOff = (Button) findViewById(R.id.fan_off);
+        PCWol = (Button) findViewById(R.id.pc_wol);
         ConnectionInfo = (TextView) findViewById(R.id.connectionInfo);
         Warning = (TextView) findViewById(R.id.warning);
 
         cTask = new connectTask();
         cTask.execute();
+
+        TvPower.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("remote tv power");
+            }
+        });
+        TvSource.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("remote tv source");
+            }
+        });
+        SoundBarPower.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("remote soundbar power");
+            }
+        });
+        SoundBarSouce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("remote soundbar source");
+            }
+        });
+        SoundBarVolDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("remote soundbar voldown");
+            }
+        });
+        SoundBarVolUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("remote soundbar volup");
+            }
+        });
+        SoundBarMute.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("remote soundbar mute");
+            }
+        });
+        SoundBarPre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("remote soundbar pre");
+            }
+        });
+        SoundBarPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("remote soundbar play");
+            }
+        });
+        SoundBarNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("remote soundbar next");
+            }
+        });
+        LightsOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("lights on");
+            }
+        });
+        LightsOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("lights off");
+            }
+        });
+        FanOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("fan on");
+            }
+        });
+        FanOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("fan off");
+            }
+        });
+        PCWol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommandToServer("pc wol");
+            }
+        });
     }
+
     public class connectTask extends AsyncTask<String, String, TCPClient> {
 
         @Override
@@ -130,6 +240,18 @@ public class RoomActivity extends AppCompatActivity
         }
         else
             Toast.makeText(getApplicationContext(), "You are not connected to network \"Wines\"!", Toast.LENGTH_LONG).show();
+    }
+
+    private void sendCommandToServer(String command)
+    {
+        if (mTcpClient.isConnected()) {
+            //sends the message to the server
+            if (mTcpClient != null) {
+                mTcpClient.sendMessage(command);
+            }
+        } else {
+            Toast.makeText(getApplicationContext(), "Error! Try pressing \"CONNECT\" and make sure your connected to wifi named \"Wines\".", Toast.LENGTH_LONG).show();
+        }
     }
 
     private boolean isCorrectSSID()

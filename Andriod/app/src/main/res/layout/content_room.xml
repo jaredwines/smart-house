@@ -51,12 +51,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView11"
+                android:layout_below="@+id/tv"
                 android:layout_marginStart="55dp"
                 android:text="Power"/>
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -69,11 +69,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/tv_power"
-                android:layout_toStartOf="@+id/textView15"
+                android:layout_toStartOf="@+id/pc"
                 android:text="Source"/>
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/soundbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -86,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/tv_power"
-                android:layout_below="@+id/textView12"
+                android:layout_below="@+id/soundbar"
                 android:text="Power"/>
 
             <Button
@@ -94,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/tv_source"
-                android:layout_below="@+id/textView12"
+                android:layout_below="@+id/soundbar"
                 android:text="Source"/>
 
             <Button
@@ -146,7 +146,7 @@
                 android:text="Next"/>
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/lights"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -155,27 +155,27 @@
                 android:text="Lights"/>
 
             <Button
-                android:id="@+id/soundbar_lights_on"
+                android:id="@+id/lights_on"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView13"
+                android:layout_below="@+id/lights"
                 android:layout_marginTop="-131dp"
                 android:text="On"/>
 
             <Button
-                android:id="@+id/soundbar_lights_off"
+                android:id="@+id/lights_off"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/soundbar_lights_on"
+                android:layout_below="@+id/lights_on"
                 android:text="Off"/>
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/fan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/textView13"
+                android:layout_alignTop="@+id/lights"
                 android:layout_centerHorizontal="true"
                 android:text="Fan"/>
 
@@ -183,7 +183,7 @@
                 android:id="@+id/fan_on"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView13"
+                android:layout_below="@+id/lights"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="-131dp"
                 android:text="On"/>
@@ -192,25 +192,26 @@
                 android:id="@+id/fan_off"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/soundbar_lights_on"
+                android:layout_below="@+id/lights_on"
                 android:layout_centerHorizontal="true"
                 android:text="Off"/>
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/pc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/textView13"
+                android:layout_alignTop="@+id/lights"
                 android:layout_marginEnd="34dp"
+                android:layout_marginTop="0dp"
                 android:text="PC"/>
 
             <Button
-                android:id="@+id/button35"
+                android:id="@+id/pc_wol"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_below="@+id/textView13"
+                android:layout_below="@+id/lights"
                 android:layout_marginTop="-131dp"
                 android:text="WoL"/>
 
