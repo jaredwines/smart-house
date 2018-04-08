@@ -109,8 +109,8 @@
                 android:id="@+id/soundbar_vol_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/soundbar_power"
-                android:layout_centerHorizontal="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/soundbar_vol_down"
                 android:text="Vol Up"/>
 
             <Button
@@ -118,15 +118,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_below="@+id/soundbar_power"
+                android:layout_below="@+id/soundbar_vol_down"
                 android:text="Mute"/>
 
             <Button
                 android:id="@+id/soundbar_pre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/soundbar_vol_down"
+                android:layout_below="@+id/soundbar_power"
+                android:layout_centerHorizontal="true"
                 android:text="Previous"/>
 
             <Button
@@ -142,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_below="@+id/soundbar_vol_down"
+                android:layout_below="@+id/soundbar_power"
                 android:text="Next"/>
 
             <TextView

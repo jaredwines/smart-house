@@ -55,46 +55,46 @@ int main (int argc, char *argv[])
 	else if (strcmp(argv[1], "soundbar") == 0)
 	{
 		if (strcmp(argv[2], "power") == 0)
-			system(arrOfTVCommands[0]);
+			system(arrOfSoundBarCommands[0]);
 		
 		else if (strcmp(argv[2], "volup") == 0)
-			system(arrOfTVCommands[1]);
+			system(arrOfSoundBarCommands[1]);
 		
 		else if (strcmp(argv[2], "voldown") == 0)
-			system(arrOfTVCommands[2]);
+			system(arrOfSoundBarCommands[2]);
 		
 		else if (strcmp(argv[2], "source") == 0)
-			system(arrOfTVCommands[3]);
+			system(arrOfSoundBarCommands[3]);
 		
 		else if (strcmp(argv[2], "mute") == 0)
-			system(arrOfTVCommands[4]);
+			system(arrOfSoundBarCommands[4]);
 		
 		else if (strcmp(argv[2], "left") == 0)
-			system(arrOfTVCommands[5]);
+			system(arrOfSoundBarCommands[5]);
 		
 		else if (strcmp(argv[2], "right") == 0)
-			system(arrOfTVCommands[6]);
+			system(arrOfSoundBarCommands[6]);
 		
 		else if (strcmp(argv[2], "next") == 0)
-			system(arrOfTVCommands[7]);
+			system(arrOfSoundBarCommands[7]);
 		
 		else if (strcmp(argv[2], "play") == 0)
-			system(arrOfTVCommands[8]);
+			system(arrOfSoundBarCommands[8]);
 		
 		else if (strcmp(argv[2], "pre") == 0)
-			system(arrOfTVCommands[9]);
+			system(arrOfSoundBarCommands[9]);
 		
 		else if (strcmp(argv[2], "effect") == 0)
-			system(arrOfTVCommands[10]);
+			system(arrOfSoundBarCommands[10]);
 		
 		else if (strcmp(argv[2], "sound") == 0)
-			system(arrOfTVCommands[11]);
+			system(arrOfSoundBarCommands[11]);
 		
 		else if (strcmp(argv[2], "bluetooth") == 0)
-			system(arrOfTVCommands[12]);
+			system(arrOfSoundBarCommands[12]);
 		
 		else if (strcmp(argv[2], "control") == 0)
-			system(arrOfTVCommands[13]);
+			system(arrOfSoundBarCommands[13]);
 		else
 			printf("Error: Invalid Function Name!\n");  
 	}
