@@ -56,11 +56,6 @@ public class RoomActivity extends AppCompatActivity
         SoundBarPre = (Button) findViewById(R.id.soundbar_pre);
         SoundBarPlay = (Button) findViewById(R.id.soundbar_play);
         SoundBarNext = (Button) findViewById(R.id.soundbar_next);
-        LightsOn = (Button) findViewById(R.id.lights_on);
-        LightsOff = (Button) findViewById(R.id.lights_off);
-        FanOn = (Button) findViewById(R.id.fan_on);
-        FanOff = (Button) findViewById(R.id.fan_off);
-        PCWol = (Button) findViewById(R.id.pc_wol);
         ConnectionInfo = (TextView) findViewById(R.id.connectionInfo);
         Warning = (TextView) findViewById(R.id.warning);
 
@@ -127,36 +122,6 @@ public class RoomActivity extends AppCompatActivity
                 sendCommandToServer("remote soundbar next");
             }
         });
-        LightsOn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendCommandToServer("lights on");
-            }
-        });
-        LightsOff.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendCommandToServer("lights off");
-            }
-        });
-        FanOn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendCommandToServer("fan on");
-            }
-        });
-        FanOff.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendCommandToServer("fan off");
-            }
-        });
-        PCWol.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendCommandToServer("pc wol");
-            }
-        });
     }
 
     public class connectTask extends AsyncTask<String, String, TCPClient> {
@@ -204,7 +169,13 @@ public class RoomActivity extends AppCompatActivity
             3 = connected to server
             4 = disconnected from server
              */
-
+            if (values[0].equals("0")) {
+                Toast.makeText(getApplicationContext(), "Request failed! :(", Toast.LENGTH_LONG).show();
+            }
+            //Passcode was valid
+            else if (values[0].equals("1")) {
+                Toast.makeText(getApplicationContext(), "Request was accepted by the server.", Toast.LENGTH_LONG).show();
+            }
             //Connected to server
             if (values[0].equals("3")) {
                 //Toast.makeText(getApplicationContext(), "Connected", Toast.LENGTH_LONG).show();
@@ -240,6 +211,11 @@ public class RoomActivity extends AppCompatActivity
         }
         else
             Toast.makeText(getApplicationContext(), "You are not connected to network \"Wines\"!", Toast.LENGTH_LONG).show();
+    }
+
+    private void disconnect()
+    {
+        mTcpClient.stop();
     }
 
     private void sendCommandToServer(String command)
@@ -291,6 +267,10 @@ public class RoomActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_connect) {
+            connect();
+            return true;
+        } else if (id == R.id.action_disconnect) {
+            disconnect();
             return true;
         }
 

@@ -102,6 +102,7 @@ int main (int argc, char *argv[])
 	else
 		printf("Error: Invalid Device Name!\n");  
 	
+	puts ("1");
 	
 	return 0;
 }

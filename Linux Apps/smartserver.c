@@ -26,7 +26,7 @@ char path[1024];
 
 int isAcceptableCommand(char command[100])
 {
-	int result = FALSE;
+	int isAcceptableCommandBool = FALSE;
 	char * arrOfAcceptableCommands[] = 
 	{
 		"remote tv power",
@@ -49,17 +49,17 @@ int isAcceptableCommand(char command[100])
 	};
 	int arrSize = sizeof(arrOfAcceptableCommands) / sizeof(arrOfAcceptableCommands[0]);
 	
-	if(strncmp(command, "gate", 4) == 0)
-		result = TRUE;
+	if((strncmp(command, "gate", 4) == 0) || (strncmp(command, "garage", 4) == 0))
+		isAcceptableCommandBool = TRUE;
 	
 	int i;
 	for (i = 0; i < arrSize; i++)
 	{
 		if(strcmp(command, arrOfAcceptableCommands[i]) == 0)
-			result = TRUE;
+			isAcceptableCommandBool = TRUE;
 	}
 
-	return result;
+	return isAcceptableCommandBool;
 }
 
 void excuteCommand(char command[100], int charSize)
@@ -75,7 +75,7 @@ void excuteCommand(char command[100], int charSize)
 		}
 		/* Read the output a line at a time - output it. */
 		while (fgets(path, sizeof(path), fp) != NULL) {
-		//printf("%s", path);
+		printf("%s", path);
 		send(sd , path , strlen(path) , 0 );  
 		}
 

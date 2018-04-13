@@ -159,7 +159,7 @@ public class GateOpenerActivity extends AppCompatActivity
             }
             //Passcode was valid
             else if (values[0].equals("1")) {
-                Toast.makeText(getApplicationContext(), "Correct!!!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Correct, opening gate now!!!", Toast.LENGTH_LONG).show();
                 if (!muteFlag) {
                     MediaPlayer mushroomSound = MediaPlayer.create(getApplicationContext(), R.raw.secret);
                     mushroomSound.start();
@@ -215,6 +215,11 @@ public class GateOpenerActivity extends AppCompatActivity
         }
         else
             Toast.makeText(getApplicationContext(), "You are not connected to network \"Wines\"!", Toast.LENGTH_LONG).show();
+    }
+
+    private void disconnect()
+    {
+        mTcpClient.stop();
     }
 
     private void mute() {
@@ -274,7 +279,10 @@ public class GateOpenerActivity extends AppCompatActivity
         if (id == R.id.action_connect) {
             connect();
             return true;
-        } else if (id == R.id.action_mute) {
+        } else if (id == R.id.action_disconnect) {
+            disconnect();
+            return true;
+        }else if (id == R.id.action_mute) {
             mute();
             return true;
         }

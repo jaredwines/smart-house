@@ -12,7 +12,7 @@ int main (int argc, char *argv[])
 
   if (argc != 2)
     {
-      fprintf (stderr, "Error: ./gate <passCode> \n");
+      fprintf (stderr, "Error: ./garage <passCode> \n");
       return 1;
     }
 

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Room1Activity"
+    tools:context=".RoomActivity"
     tools:showIn="@layout/app_bar_room">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -19,15 +19,13 @@
                     android:paddingTop="@dimen/activity_vertical_margin"
                     tools:context="com.jdwstudio.jared.smartroom.Room1Activity"
                     tools:layout_editor_absoluteX="0dp"
-                    tools:layout_editor_absoluteY="0dp">
+                    tools:layout_editor_absoluteY="60dp">
 
         <RelativeLayout
             android:id="@+id/room1GUI"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true">
+            android:layout_centerInParent="true">
 
             <TextView
                 android:id="@+id/connectionInfo"
@@ -50,9 +48,8 @@
                 android:id="@+id/tv_power"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
                 android:layout_below="@+id/tv"
-                android:layout_marginStart="55dp"
+                android:layout_toStartOf="@+id/tv"
                 android:text="Power"/>
 
             <TextView
@@ -62,14 +59,15 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="80dp"
-                android:text="TV"/>
+                android:text="TV"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 
             <Button
                 android:id="@+id/tv_source"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/tv_power"
-                android:layout_toStartOf="@+id/pc"
+                android:layout_toEndOf="@+id/tv"
                 android:text="Source"/>
 
             <TextView
@@ -78,8 +76,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="157dp"
-                android:text="SoundBar"/>
+                android:layout_marginTop="204dp"
+                android:text="SoundBar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 
             <Button
                 android:id="@+id/soundbar_power"
@@ -94,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/tv_source"
-                android:layout_below="@+id/soundbar"
+                android:layout_alignTop="@+id/soundbar_power"
                 android:text="Source"/>
 
             <Button
@@ -102,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/soundbar_power"
+                android:layout_below="@+id/soundbar_vol_up"
                 android:text="Vol Down"/>
 
             <Button
@@ -110,7 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/soundbar_vol_down"
+                android:layout_below="@+id/soundbar_power"
                 android:text="Vol Up"/>
 
             <Button
@@ -118,14 +117,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_below="@+id/soundbar_vol_down"
+                android:layout_alignTop="@+id/soundbar_vol_down"
                 android:text="Mute"/>
 
             <Button
                 android:id="@+id/soundbar_pre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/soundbar_power"
+                android:layout_alignTop="@+id/soundbar_vol_up"
                 android:layout_centerHorizontal="true"
                 android:text="Previous"/>
 
@@ -133,7 +132,7 @@
                 android:id="@+id/soundbar_play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/soundbar_vol_down"
+                android:layout_alignTop="@+id/soundbar_vol_down"
                 android:layout_centerHorizontal="true"
                 android:text="Play"/>
 
@@ -142,78 +141,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_below="@+id/soundbar_power"
+                android:layout_alignTop="@+id/soundbar_vol_up"
                 android:text="Next"/>
-
-            <TextView
-                android:id="@+id/lights"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignStart="@+id/connectionInfo"
-                android:layout_marginBottom="131dp"
-                android:text="Lights"/>
-
-            <Button
-                android:id="@+id/lights_on"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/lights"
-                android:layout_marginTop="-131dp"
-                android:text="On"/>
-
-            <Button
-                android:id="@+id/lights_off"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/lights_on"
-                android:text="Off"/>
-
-            <TextView
-                android:id="@+id/fan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/lights"
-                android:layout_centerHorizontal="true"
-                android:text="Fan"/>
-
-            <Button
-                android:id="@+id/fan_on"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/lights"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="-131dp"
-                android:text="On"/>
-
-            <Button
-                android:id="@+id/fan_off"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/lights_on"
-                android:layout_centerHorizontal="true"
-                android:text="Off"/>
-
-            <TextView
-                android:id="@+id/pc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/lights"
-                android:layout_marginEnd="34dp"
-                android:layout_marginTop="0dp"
-                android:text="PC"/>
-
-            <Button
-                android:id="@+id/pc_wol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/lights"
-                android:layout_marginTop="-131dp"
-                android:text="WoL"/>
 
         </RelativeLayout>
 

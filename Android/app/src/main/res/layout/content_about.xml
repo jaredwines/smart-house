@@ -9,12 +9,4 @@
     tools:context=".AboutActivity"
     tools:showIn="@layout/app_bar_about">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="About Page"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="168dp"/>
-
 </android.support.constraint.ConstraintLayout>
