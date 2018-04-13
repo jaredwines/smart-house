@@ -17,7 +17,7 @@
                     android:paddingLeft="@dimen/activity_horizontal_margin"
                     android:paddingRight="@dimen/activity_horizontal_margin"
                     android:paddingTop="@dimen/activity_vertical_margin"
-                    tools:context="com.jdwstudio.jared.smartroom.Room1Activity"
+                    tools:context="com.jdwstudio.jared.smart_house.Room1Activity"
                     tools:layout_editor_absoluteX="0dp"
                     tools:layout_editor_absoluteY="60dp">
 

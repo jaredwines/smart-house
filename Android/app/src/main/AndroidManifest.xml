@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.jdwstudio.jared.smartroom">
+          package="com.jdwstudio.jared.smart_house">
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.jdwstudio.jared.smart_house.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -22,22 +22,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GateOpenerActivity"
+            android:name="com.jdwstudio.jared.smart_house.GateOpenerActivity"
             android:label="@string/title_gate_opener"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".RoomActivity"
+            android:name="com.jdwstudio.jared.smart_house.RoomActivity"
             android:label="@string/title_activity_room"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".AboutActivity"
+            android:name="com.jdwstudio.jared.smart_house.AboutActivity"
             android:label="@string/title_activity_about"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name=".GarageOpenerActivity"
+            android:name="com.jdwstudio.jared.smart_house.GarageOpenerActivity"
             android:label="@string/title_activity_garage_opener"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>

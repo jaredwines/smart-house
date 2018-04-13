@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.jdwstudio.jared.smartroom"
+        applicationId "com.jdwstudio.jared.smart_house"
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 1
