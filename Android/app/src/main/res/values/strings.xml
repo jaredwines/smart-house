@@ -13,4 +13,5 @@
     <string name="title_activity_room">Room</string>
     <string name="title_activity_garage_opener">Garage Opener</string>
     <string name="action_settings">Settings</string>
+    <string name="about">Smart House was designed by Jared Wines. View the links below for more information about the developer.</string>
 </resources>

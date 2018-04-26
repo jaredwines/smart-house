@@ -9,4 +9,75 @@
     tools:context=".AboutActivity"
     tools:showIn="@layout/app_bar_about">
 
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="38dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/about"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintBottom_toTopOf="@+id/playStore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"/>
+
+    <Button
+        android:id="@+id/playStore"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
+        android:text="View Play Store"
+        app:layout_constraintBottom_toTopOf="@+id/github"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about"
+        />
+
+    <Button
+        android:id="@+id/github"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:text="View Github"
+        app:layout_constraintBottom_toTopOf="@+id/linkedin"
+        app:layout_constraintStart_toStartOf="@+id/linkedin"
+        app:layout_constraintTop_toBottomOf="@+id/playStore"
+        />
+
+    <Button
+        android:id="@+id/linkedin"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:text="View LinkedIn"
+        app:layout_constraintBottom_toTopOf="@+id/resume"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/github"
+        />
+
+    <Button
+        android:id="@+id/resume"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginStart="3dp"
+        android:text="View Resume"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/linkedin"
+        app:layout_constraintTop_toBottomOf="@+id/linkedin"
+        />
 </android.support.constraint.ConstraintLayout>

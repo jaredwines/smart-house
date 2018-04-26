@@ -1,6 +1,7 @@
 package com.jdwstudio.jared.smart_house;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -9,9 +10,12 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class AboutActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    Button PlayStore, Github, Linkedin, Resume;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,45 @@ public class AboutActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        PlayStore = (Button) findViewById(R.id.playStore);
+        Github = (Button) findViewById(R.id.github);
+        Linkedin = (Button) findViewById(R.id.linkedin);
+        Resume = (Button) findViewById(R.id.resume);
+
+        PlayStore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToUrl("https://play.google.com/store/apps/developer?id=Jared%20Wines&hl=en");
+            }
+        });
+
+        Github.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToUrl("https://github.com/jaredwines");
+            }
+        });
+
+        Linkedin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToUrl("https://www.linkedin.com/in/jaredwines/");
+            }
+        });
+
+        Resume.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToUrl("https://gdurl.com/WkLJ");
+            }
+        });
+    }
+
+    private void goToUrl (String url) {
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
     }
 
     @Override
