@@ -27,7 +27,7 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-            android:name="com.jdwstudio.jared.smart_house.RoomActivity"
+            android:name="com.jdwstudio.jared.smart_house.RoomControllerActivity"
             android:label="@string/title_activity_room"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>

@@ -307,8 +307,8 @@ public class GarageOpenerActivity extends AppCompatActivity
             //Is already in GarageOpenerActivity.class
             //Intent i = new Intent(getApplicationContext(),GarageOpenerActivity.class);
             //startActivity(i);
-        } else if (id == R.id.nav_room) {
-            Intent i = new Intent(getApplicationContext(),RoomActivity.class);
+        } else if (id == R.id.nav_room_controller) {
+            Intent i = new Intent(getApplicationContext(),RoomControllerActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_about) {
             Intent i = new Intent(getApplicationContext(),AboutActivity.class);

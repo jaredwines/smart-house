@@ -9,9 +9,12 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    Button GateOpener, GarageOpener, RoomController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,34 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        GateOpener = (Button) findViewById(R.id.gateOpenerMain);
+        GarageOpener = (Button) findViewById(R.id.gateOpenerMain);
+        RoomController = (Button) findViewById(R.id.roomControllerMain);
+
+        GateOpener.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),GateOpenerActivity.class);
+                startActivity(i);
+            }
+        });
+
+        GarageOpener.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),GarageOpenerActivity.class);
+                startActivity(i);
+            }
+        });
+
+        RoomController.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),RoomControllerActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -55,8 +86,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_garage_opener) {
             Intent i = new Intent(getApplicationContext(),GarageOpenerActivity.class);
             startActivity(i);
-        } else if (id == R.id.nav_room) {
-            Intent i = new Intent(getApplicationContext(),RoomActivity.class);
+        } else if (id == R.id.nav_room_controller) {
+            Intent i = new Intent(getApplicationContext(),RoomControllerActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_about) {
             Intent i = new Intent(getApplicationContext(),AboutActivity.class);

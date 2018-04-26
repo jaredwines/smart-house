@@ -10,7 +10,7 @@
     tools:showIn="@layout/app_bar_main">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/gateImage"
         android:layout_width="355dp"
         android:layout_height="80dp"
         app:srcCompat="@android:color/holo_blue_bright"
@@ -18,7 +18,7 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/roomImage"
         android:layout_width="355dp"
         android:layout_height="80dp"
         app:srcCompat="@android:color/holo_blue_bright"
@@ -26,7 +26,7 @@
         tools:layout_editor_absoluteY="329dp" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/garageImage"
         android:layout_width="355dp"
         android:layout_height="80dp"
         app:srcCompat="@android:color/holo_blue_bright"
@@ -34,29 +34,29 @@
         tools:layout_editor_absoluteY="175dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/roomControllerMain"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="303dp"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Room Controller"
         tools:layout_editor_absoluteX="41dp"
         tools:layout_editor_absoluteY="409dp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/garageOpenerMain"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="303dp"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Garage Opener"
         tools:layout_editor_absoluteX="41dp"
         tools:layout_editor_absoluteY="254dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/gateOpenerMain"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="303dp"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Gate Opener"
         tools:layout_editor_absoluteX="41dp"
         tools:layout_editor_absoluteY="96dp" />
 </android.support.constraint.ConstraintLayout>

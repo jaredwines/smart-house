@@ -17,9 +17,9 @@
             android:icon="@drawable/ic_menu_garage"
             android:title="Garage Opener"/>
         <item
-            android:id="@+id/nav_room"
+            android:id="@+id/nav_room_controller"
             android:icon="@drawable/ic_menu_room"
-            android:title="Room"/>
+            android:title="Room Controller"/>
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_menu_about"

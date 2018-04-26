@@ -19,7 +19,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class RoomActivity extends AppCompatActivity
+public class RoomControllerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private TCPClient mTcpClient;
     private connectTask cTask;
@@ -32,7 +32,7 @@ public class RoomActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_room);
+        setContentView(R.layout.activity_room_controller);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -292,9 +292,9 @@ public class RoomActivity extends AppCompatActivity
         } else if (id == R.id.nav_garage_opener) {
             Intent i = new Intent(getApplicationContext(),GarageOpenerActivity.class);
             startActivity(i);
-        } else if (id == R.id.nav_room) {
-            //Is already in RoomActivity.class
-            //Intent i = new Intent(getApplicationContext(),RoomActivity.class);
+        } else if (id == R.id.nav_room_controller) {
+            //Is already in RoomControllerActivity.class
+            //Intent i = new Intent(getApplicationContext(),RoomControllerActivity.class);
             //startActivity(i);
         } else if (id == R.id.nav_about) {
             Intent i = new Intent(getApplicationContext(),AboutActivity.class);

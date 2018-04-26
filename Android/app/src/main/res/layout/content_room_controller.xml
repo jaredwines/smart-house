@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".RoomActivity"
-    tools:showIn="@layout/app_bar_room">
+    tools:context=".RoomControllerActivity"
+    tools:showIn="@layout/app_bar_room_controller">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:tools="http://schemas.android.com/tools"
