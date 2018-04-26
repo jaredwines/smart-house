@@ -15,7 +15,7 @@ import android.widget.Button;
 
 public class AboutActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Button PlayStore, Github, Linkedin, Resume;
+    Button PlayStore, Github, Linkedin, PersonalSite, Resume;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +33,18 @@ public class AboutActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        PersonalSite = (Button) findViewById(R.id.personalSite);
         PlayStore = (Button) findViewById(R.id.playStore);
         Github = (Button) findViewById(R.id.github);
         Linkedin = (Button) findViewById(R.id.linkedin);
         Resume = (Button) findViewById(R.id.resume);
+
+        PersonalSite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToUrl("http://www.jaredwines.com/");
+            }
+        });
 
         PlayStore.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +73,7 @@ public class AboutActivity extends AppCompatActivity
                 goToUrl("https://gdurl.com/WkLJ");
             }
         });
+
     }
 
     private void goToUrl (String url) {
