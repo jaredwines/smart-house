@@ -24,9 +24,9 @@ public class RoomActivity extends AppCompatActivity
     private TCPClient mTcpClient;
     private connectTask cTask;
     Button TvPower, TvSource, SoundBarPower,SoundBarSouce,SoundBarVolDown,SoundBarVolUp,SoundBarMute,
-            SoundBarPre,SoundBarPlay,SoundBarNext,LightsOn,LightsOff,FanOn,FanOff,PCWol;
+            SoundBarPre,SoundBarPlay,SoundBarNext;
     TextView ConnectionInfo, Warning;
-    String host = "192.168.1.200";
+    String host = "pi.jaredwines.com";
     int port = 8000;
 
     @Override

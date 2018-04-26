@@ -28,7 +28,7 @@ public class GarageOpenerActivity extends AppCompatActivity
     TextView PassCodeScreen, ConnectionInfo, Warning;
     String passCode = "";
     Boolean muteFlag = false;
-    String host = "192.168.1.200";
+    String host = "pi.jaredwines.com";
     int port = 8000;
 
     @Override
