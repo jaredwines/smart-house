@@ -70,6 +70,7 @@ public class GateOpenerActivity extends AppCompatActivity
 
         numKeyPadOnClick();
 
+        //clear passcode text
         Clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +79,7 @@ public class GateOpenerActivity extends AppCompatActivity
             }
         });
 
-
+        //send the passcode to the server
         Enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -204,6 +205,7 @@ public class GateOpenerActivity extends AppCompatActivity
         }
     }
 
+
     private void connect() {
         if(isCorrectSSID())
         {
@@ -232,6 +234,7 @@ public class GateOpenerActivity extends AppCompatActivity
         }
     }
 
+    //If the user input is less then 4 then add it to passcode
     private void addToPassCode(String userInput) {
         if (passCode.length() <= 3) {
             passCode += userInput;
@@ -240,6 +243,7 @@ public class GateOpenerActivity extends AppCompatActivity
             Toast.makeText(getApplicationContext(), "4 digits have already been entered. Either press ENTER or CLEAR", Toast.LENGTH_LONG).show();
     }
 
+    //Checks if your wifi connects is name "Wines". This insures you are on the correct network.
     private boolean isCorrectSSID()
     {
         WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);

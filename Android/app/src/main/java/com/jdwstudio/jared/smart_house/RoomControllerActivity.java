@@ -230,6 +230,7 @@ public class RoomControllerActivity extends AppCompatActivity
         }
     }
 
+    //Checks if your wifi connects is name "Wines". This insures you are on the correct network.
     private boolean isCorrectSSID()
     {
         WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);

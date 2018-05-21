@@ -24,6 +24,7 @@ char buffer[100];  //data buffer of 0.1K
 FILE *fp;
 char path[1024];
 
+//isAcceptableCommand is a white list of acceptable commands the server is allow to excute
 int isAcceptableCommand(char command[100])
 {
 	int isAcceptableCommandBool = FALSE;
@@ -62,6 +63,7 @@ int isAcceptableCommand(char command[100])
 	return isAcceptableCommandBool;
 }
 
+//excutes the command on the linux server and sends the result to the client
 void excuteCommand(char command[100], int charSize)
 {
 	command[charSize - 3] = '\0';

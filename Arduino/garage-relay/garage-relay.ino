@@ -13,11 +13,11 @@ EthernetServer server(23);
 
 int RELAY = 6;
 int LED = 8;
-int digitCounter = 0;
+int digitCounter = 0;           //A counter use to check if the string of digits is a size of four
 char inData = 0;                //Variable for storing received data
 String receivedMessage = "";         //Variable for storing 4 digit receivedMessage
 String passCode = "1550";
-bool readyForreceivedMessage = false;
+bool readyForReceivedMessage = false;
 
 void setup() {
   // initialize the ethernet device
@@ -40,7 +40,7 @@ void loop() {
   EthernetClient client = server.available();
   if (client.available()) {
     inData = client.read();      //Read the incoming data and store it into variable data
-    if (readyForreceivedMessage)
+    if (readyForReceivedMessage)
     {
       receivedMessage += inData;
       digitCounter++;
@@ -70,12 +70,13 @@ void loop() {
         client.flush();
         receivedMessage = "";
         digitCounter = 0;
-        readyForreceivedMessage = false;
+        readyForReceivedMessage = false;
       }
     }
+    //When a "$" is read then the gate_relay knows the next four numbers with be the passcode.
     if (inData == '$')
     {
-      readyForreceivedMessage = true;
+      readyForReceivedMessage = true;
     }
   }
   if (!client.connected())

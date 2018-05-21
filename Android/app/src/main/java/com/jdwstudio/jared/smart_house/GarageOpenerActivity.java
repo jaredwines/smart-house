@@ -70,6 +70,7 @@ public class GarageOpenerActivity extends AppCompatActivity
 
         numKeyPadOnClick();
 
+        //clear passcode text
         Clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +79,7 @@ public class GarageOpenerActivity extends AppCompatActivity
             }
         });
 
-
+        //send the passcode to the server
         Enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -204,6 +205,7 @@ public class GarageOpenerActivity extends AppCompatActivity
         }
     }
 
+    //Checks if your wifi connects is name "Wines". This insures you are on the correct network.
     private void connect() {
         if(isCorrectSSID())
         {
@@ -222,6 +224,7 @@ public class GarageOpenerActivity extends AppCompatActivity
         mTcpClient.stop();
     }
 
+    //mutes the noise that gets played if the passcode is correct or incorrect
     private void mute() {
         if (muteFlag) {
             muteFlag = false;
@@ -232,6 +235,7 @@ public class GarageOpenerActivity extends AppCompatActivity
         }
     }
 
+    //If the user input is less then 4 then add it to passcode
     private void addToPassCode(String userInput) {
         if (passCode.length() <= 3) {
             passCode += userInput;
@@ -240,6 +244,7 @@ public class GarageOpenerActivity extends AppCompatActivity
             Toast.makeText(getApplicationContext(), "4 digits have already been entered. Either press ENTER or CLEAR", Toast.LENGTH_LONG).show();
     }
 
+    //Checks if your wifi connects is name "Wines". This insures you are on the correct network.
     private boolean isCorrectSSID()
     {
         WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
