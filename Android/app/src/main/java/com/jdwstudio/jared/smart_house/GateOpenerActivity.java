@@ -300,10 +300,7 @@ public class GateOpenerActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_main) {
-            Intent i = new Intent(getApplicationContext(),MainActivity.class);
-            startActivity(i);
-        } else if (id == R.id.nav_gate_opener) {
+        if (id == R.id.nav_gate_opener) {
             //Is already in GateOpenerActivity.class
             //Intent i = new Intent(getApplicationContext(),GateOpenerActivity.class);
             //startActivity(i);

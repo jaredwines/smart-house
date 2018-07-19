@@ -98,10 +98,7 @@ public class AboutActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_main) {
-            Intent i = new Intent(getApplicationContext(),MainActivity.class);
-            startActivity(i);
-        } else if (id == R.id.nav_gate_opener) {
+        if (id == R.id.nav_gate_opener) {
             Intent i = new Intent(getApplicationContext(),GateOpenerActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_garage_opener) {

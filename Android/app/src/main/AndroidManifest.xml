@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.jdwstudio.jared.smart_house.MainActivity"
+            android:name="com.jdwstudio.jared.smart_house.GateOpenerActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -20,11 +20,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity
-            android:name="com.jdwstudio.jared.smart_house.GateOpenerActivity"
-            android:label="@string/title_gate_opener"
-            android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
             android:name="com.jdwstudio.jared.smart_house.RoomControllerActivity"
